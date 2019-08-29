@@ -1,0 +1,33 @@
+.module {
+	.content {
+		@extend .list-unstyled;
+		// @extend .row;
+	}
+
+
+	.mod_articles_news {
+		.mod {
+
+			&-block {
+				@extend .card;
+				height: 100%;
+			}
+
+			&-images {
+				@extend .card-img-top;
+			}
+
+			&-item {
+				@extend .card-body;
+			}
+
+			&-text {
+				@extend .card-text;
+			}
+
+			&-footer {
+				@extend .card-footer;
+			}
+		}
+	}
+}

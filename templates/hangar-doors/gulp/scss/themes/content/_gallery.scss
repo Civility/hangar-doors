@@ -1,0 +1,11 @@
+.gallery {
+	@extend .row;
+	@extend .align-items-center;
+	@extend .justify-content-center;
+
+	.image {
+		@extend .mb-4;
+		height: 250px;
+		overflow: hidden;
+	}
+}

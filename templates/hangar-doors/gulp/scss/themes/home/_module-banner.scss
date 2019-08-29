@@ -1,0 +1,23 @@
+.mod-banner {
+    .module {
+        &-banner {
+            @extend .jumbotron;
+            @extend .jumbotron-fluid;
+
+            @extend %img-bg;
+
+            .btn {
+                @extend .btn-lg;
+            }
+        }
+
+        &_col {
+            @extend .container;
+            @extend .py-5;
+            @extend .text-white;
+            @extend .display-4;
+            @extend .font-weight-normal;
+            line-height: $line-height-lg;
+        }
+    }
+}

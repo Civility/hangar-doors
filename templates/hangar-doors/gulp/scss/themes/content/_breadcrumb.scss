@@ -1,0 +1,13 @@
+.module {
+	&-breadcrumbs {
+		@extend .border-bottom;
+	}
+}
+
+.breadcrumb {
+	@extend .container;
+
+	&-item {
+		@extend .font-weight-bold;
+	}
+}

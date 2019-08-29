@@ -1,0 +1,26 @@
+.block {
+    .item {
+        &-block {
+            @extend .card;
+        }
+    }
+
+    &-row {
+        @extend .row;
+
+        .item {
+            &-content {
+                @extend .d-flex;
+                @extend .flex-column;
+            }
+        }
+    }
+
+    .item {
+        @extend .mb-4;
+
+        &-content {
+            @extend .card-body;
+        }
+    }
+}

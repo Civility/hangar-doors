@@ -1,0 +1,60 @@
+.mod-solutions {
+	.module {
+		&-solutions {
+			@extend .row;
+			@extend .mb-4;
+		}
+
+		&_col {
+			@extend .col-12;
+			@extend .col-md-3;
+			@extend .mb-lg-0;
+			@extend .mb-4;
+
+		}
+
+		&_card {
+			@extend .card;
+			// @extend .flex-fill;
+			@extend .h-100;
+
+			&-images {
+				@extend .card-img-top;
+			}
+
+			@extend .shadow;
+			@extend .border-0;
+			@include transition($transition-base);
+
+			@include hover-focus-active {
+				@extend .shadow-xl;
+			}
+
+			&-link {
+				@extend .text-white;
+				@extend .link;
+			}
+
+			&-item {
+				@extend .bg-primary;
+				@extend .text-center;
+				@extend .card-body;
+				@extend .py-4;
+				@extend .d-flex;
+				@extend .justify-content-center;
+				@extend .align-items-center;
+			}
+
+
+
+			&-title {
+				@extend .h4;
+				@extend .mb-0;
+
+				&:after {
+					@extend .d-none;
+				}
+			}
+		}
+	}
+}

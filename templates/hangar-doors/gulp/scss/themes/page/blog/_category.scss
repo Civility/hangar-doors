@@ -1,0 +1,46 @@
+.page-category {
+    @import '../../content/category/blog';
+}
+
+.category-news {
+    .item {
+        &-block {
+            @extend .h-100;
+        }
+
+        &-details {
+            @extend .position-relative;
+
+            .images {
+                max-height: 30rem;
+                min-height: $btn-padding-y * 4;
+                overflow: hidden;
+                @extend .d-flex;
+                @extend .justify-content-center;
+                @extend .align-items-center;
+            }
+
+            .info {
+                padding-left: $card-spacer-x;
+                @extend .absolute;
+                bottom: -$spacer * 2;
+
+            }
+        }
+
+        &-content {
+            @extend .justify-content-between;
+        }
+    }
+
+    .page-title {
+        &-link {
+            @extend .text-body;
+
+            @include hover-focus-active {
+                @extend .text-primary;
+            }
+        }
+    }
+
+}

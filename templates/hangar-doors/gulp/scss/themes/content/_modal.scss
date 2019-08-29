@@ -1,0 +1,9 @@
+.modal {
+	#userForm {
+		@extend .w-100;
+
+		.rsform-block-text {
+			@extend .d-none;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+.page-article {
+	.item {
+
+		@extend .mb-4;
+
+		&_content {
+			@extend .position-relative;
+
+			.tags {
+				@extend .card-img-overlay;
+
+				.badge {
+					@extend .badge-dark;
+				}
+			}
+		}
+
+		.images {
+			@extend .mb-4;
+
+		}
+
+		.info {
+			@extend .my-4;
+		}
+	}
+
+
+}

@@ -1,0 +1,18 @@
+.article-project {
+    .text {
+        h4:after {
+            @extend .d-none;
+        }
+    }
+
+    .gallery {
+
+        &_col {
+            @extend .col;
+            @extend .align-items-center;
+            @extend .justify-content-center;
+            @extend .d-flex;
+        }
+
+    }
+}

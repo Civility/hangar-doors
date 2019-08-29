@@ -1,0 +1,36 @@
+.article-contacts {
+    .text {
+        dl {
+            dt {
+                @extend .text-muted;
+            }
+
+            dd {
+                @extend .font-weight-normal;
+            }
+        }
+
+        .far {
+            @extend .float-left;
+            @extend .mr-4;
+            line-height: $line-height-base;
+        }
+
+    }
+}
+
+.body-contacts-contacts {
+    .mod-callback {
+        // @extend .col-6;
+        @extend .d-flex;
+        @extend .flex-column;
+
+        @extend .justify-content-center;
+        @extend .align-items-center;
+
+    }
+
+    #userForm {
+        @extend .w-50;
+    }
+}

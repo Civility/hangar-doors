@@ -1,0 +1,17 @@
+.footer {
+	@extend .bg-dark;
+	// @extend .py-3;
+	@extend .text-white;
+
+	.top,
+	.bottom {
+		@extend .py-3;
+	}
+
+	.bottom {
+
+		@extend .border-top;
+		@extend .text-muted;
+		@extend .border-secondary;
+	}
+}

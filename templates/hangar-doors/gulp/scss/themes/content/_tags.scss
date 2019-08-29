@@ -1,0 +1,22 @@
+.tags {
+	@extend .list-unstyled;
+	@extend .my-1;
+}
+
+.page-tag {
+	.table {
+		.list-title {
+			@extend .position-relative;
+		}
+
+		a {
+			@extend .link;
+		}
+
+		@include hover-focus-active {
+			a {
+				color: $white;
+			}
+		}
+	}
+}

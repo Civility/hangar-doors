@@ -1,0 +1,89 @@
+.mod-slider {
+    .module {
+        &-slider {
+            @include hover {
+                .slick-arrow {
+                    @extend .d-inline-block;
+                }
+            }
+
+            .slick {
+                &-prev {
+                    left: 5rem;
+                }
+
+                &-next {
+                    right: 5rem;
+                }
+
+                &-arrow {
+                    @extend .d-none;
+                }
+            }
+        }
+    }
+
+    .collector {
+        &_card {
+            &:before {
+                @extend .absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: rgba($black, .3);
+            }
+
+            .image {
+                height: 85vh;
+            }
+
+            &_item {
+                @extend .card-img-overlay;
+                @extend .container;
+                @extend .text-white;
+                @extend .text-shadow;
+
+                @extend .d-flex;
+                @extend .flex-column;
+                @extend .justify-content-center;
+                @extend .align-items-center;
+                z-index: $zindex-dropdown;
+
+                @include media-breakpoint-up(lg) {
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+                }
+
+                &-topic,
+                &-text {
+                    margin-right: 50%;
+
+                    @include media-breakpoint-down(lg) {
+                        margin-right: 0;
+                    }
+                }
+
+                &-topic {
+                    @extend .card-title;
+                    @extend .display-1;
+                    @extend .font-weight-bold;
+                    @extend .text-center;
+                    @extend .text-lg-left;
+                }
+
+                &-topic:after {
+                    @extend .mx-auto;
+                    @extend .mx-lg-0;
+                }
+
+                &-text {
+                    @extend .card-text;
+                    @extend .lead;
+                    @extend .d-none;
+                    @extend .d-md-block;
+                    @extend .font-weight-bold;
+                }
+            }
+        }
+    }
+}

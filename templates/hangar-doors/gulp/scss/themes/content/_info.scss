@@ -1,0 +1,11 @@
+.info {
+	@extend .mb-3;
+
+	&-published {
+		@extend .bg-primary;
+		@extend .text-white;
+		@extend .d-inline-block;
+		padding: $btn-padding-y $btn-padding-x;
+	}
+
+}

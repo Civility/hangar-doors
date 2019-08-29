@@ -1,0 +1,259 @@
+.article {
+    &-products {
+        .tabs {
+            @extend .lead;
+
+            &_nav {
+                // @extend .list-group-horizontal-md;
+                @extend .mb-3;
+                @extend .text-shadow;
+                @extend .font-weight-normal;
+                @extend .nav-pills;
+                @extend .nav-fill;
+                @extend .nav-justified;
+                @extend .flex-column;
+                @extend .flex-sm-row;
+
+
+
+
+                &-item {
+                    @extend .flex-fill;
+                    @extend .text-center;
+                    @extend .text-white;
+                    @extend .btn;
+                    @extend .btn-lg;
+                    @extend .bg-dark;
+                    @extend .border-light;
+
+                    @include hover-focus-active {
+                        box-shadow: none !important;
+                    }
+
+                    &.active {
+                        @extend .bg-primary;
+                        @extend .btn-primary;
+
+                    }
+
+                    @include hover-focus-active {
+                        &:not(.active) {
+                            @extend .bg-primary;
+                            @extend .btn-primary;
+
+                        }
+
+                    }
+                }
+            }
+
+            &_content {
+                @extend .tab-content;
+
+                &-pane {
+                    @extend .tab-pane;
+
+                    .pane {
+                        @extend .border-bottom;
+                    }
+
+                    .thickness,
+                    .sizecaption,
+                    .speed,
+                    .control,
+                    .options {
+                        .desc {
+                            @extend .ml-3;
+
+                            @include hover-focus-active {
+
+                                .title,
+                                .value {
+                                    @extend .text-white;
+                                    @extend .bg-gradient-primary;
+                                }
+                            }
+                        }
+
+                        .value {
+                            @extend .flex-grow-1;
+                            @extend .text-right;
+                            min-width: 30%;
+                        }
+                    }
+
+                    .color {
+                        @extend .table-hover;
+
+                        tr>td {
+                            vertical-align: middle;
+                        }
+
+                        .title {
+                            @extend .font-weight-normal;
+                        }
+
+                        .square {
+                            width: $spacer *4;
+                            height: $spacer *4;
+                        }
+
+                    }
+
+                    .speedcaption {
+
+                        .text {
+                            @extend .col-12;
+                        }
+
+                        ul {
+                            @extend .pl-3;
+
+                        }
+
+                        li {
+                            @include hover-focus-active {
+                                @extend .bg-gradient-primary;
+                                @extend .text-white;
+                            }
+
+                            list-style: none;
+                            counter-reset: li;
+                            @extend .py-2;
+
+                            &::before {
+                                content: "•";
+                                @extend .text-primary;
+                                @extend .d-inline-block;
+                                width: $spacer + $spacer;
+                                @extend .ml-n2;
+                            }
+                        }
+                    }
+
+                    .documentation {
+                        .desc {
+                            .value:before {
+                                @extend .fa-2x;
+                            }
+
+                            @include hover-focus-active {
+
+                                .title,
+                                .value {
+                                    @extend .text-white;
+                                    @extend .bg-gradient-primary;
+                                }
+
+                                .value:before {
+                                    @extend .text-white;
+                                }
+                            }
+                        }
+
+                        .title {
+                            @extend .col;
+                            @extend .py-3;
+                            @extend .ml-3;
+                            @extend .d-flex;
+                            @extend .align-items-center;
+                        }
+
+                        .value {
+                            @extend .pdf;
+                            @extend .col-auto;
+                            @extend .py-3;
+                            @extend .mr-3;
+                        }
+                    }
+                }
+            }
+
+            .caption {
+                @extend .font-weight-bold;
+            }
+
+            .desc {
+                @extend .row;
+                @extend .my-3;
+                @extend .font-weight-normal;
+
+                .title {
+                    @extend .lead;
+                    @extend .col-auto;
+                    @extend .flex-grow-1;
+                    @extend .font-weight-normal;
+                }
+
+                .value {
+                    @extend .col;
+                    @extend .mb-0;
+                }
+            }
+        }
+
+        .examples {
+            @extend .card-deck;
+            @extend .gallery;
+            @extend .my-4;
+
+            &_box {
+                .image {
+                    @extend .w-100;
+                }
+
+                .link {
+                    overflow: hidden;
+                    height: 200px;
+                }
+
+                @extend .gallery_col;
+                @extend .card;
+
+                @include hover-focus-active {
+                    .examples_box-content {
+                        @extend .visible;
+                        @include transition($transition-main);
+                        transform: scaleY(1);
+                    }
+
+                }
+
+                &-content {
+                    @extend .invisible;
+                    @include transition($transition-main);
+                    transform: scaleY(0);
+                    @extend .card-img-overlay;
+                    @extend .bg-primary-opacity;
+                    @extend .p-1;
+                    @extend .m-lg-2;
+                    @extend .d-flex;
+                    @extend .align-items-center;
+                    @extend .justify-content-center;
+                    @extend .text-center;
+
+                    .page-subtitle {
+
+                        @extend .mb-0;
+                        @extend .lead;
+                        @extend .w-100;
+                        @extend .text-white;
+                        @extend .text-shadow;
+                        @extend .font-weight-bold;
+                        @extend .text-break;
+                        text-overflow: ellipsis;
+                        hyphens: auto;
+
+                        &::after {
+                            @extend .bg-white;
+                            @extend .mx-auto;
+                            @extend .mb-auto;
+                        }
+
+                    }
+                }
+            }
+
+        }
+    }
+}

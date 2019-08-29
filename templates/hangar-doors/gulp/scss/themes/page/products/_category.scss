@@ -1,0 +1,9 @@
+.page-category {
+    @import '../../content/category/blog';
+
+    &.category {
+        &-products {
+            @import '../../content/category/block';
+        }
+    }
+}

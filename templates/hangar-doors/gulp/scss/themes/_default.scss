@@ -1,0 +1,313 @@
+/* default */
+html {
+    @include hover-focus-active {
+        outline: none !important;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 5.345rem;
+    // margin-top: -4rem;
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 9.25rem;
+    }
+}
+
+@for $i from 1 through 6 {
+
+    .h#{$i},
+    h#{$i} {
+        font-family: 'Montserrat', sans-serif;
+        text-rendering: optimizeLegibility;
+        // text-rendering: optimizeSpeed;
+        @extend .first-upper;
+        @extend .separator;
+    }
+
+
+}
+
+
+img {
+    @extend .img-fluid;
+}
+
+i {
+    @extend .fal;
+}
+
+a {
+    @include transition($transition-base);
+    @extend .text-decoration-none;
+}
+
+p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-rendering: optimizeSpeed;
+}
+
+
+:focus {
+    outline: none !important;
+}
+
+.main {
+    @extend .position-relative;
+    @extend .pb-5;
+    @extend .pt-3;
+    @extend .pb-lg-4;
+    @extend .pt-lg-4;
+    padding-left: 0;
+
+    &-container {
+        @extend .container;
+
+        &-row {
+            @extend .row;
+            @extend .no-gutters;
+            @extend .justify-content-center;
+        }
+    }
+}
+
+.separator {
+    &::after {
+        content: '';
+        left: 0;
+        bottom: 0;
+        width: 3.125rem;
+        height: 0.1875rem;
+        @extend .bg-primary;
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.mod,
+article {
+    @extend .mb-4;
+}
+
+.text-shadow {
+    text-shadow: 0 1px 2px rgba($black, .5);
+}
+
+.shadow-xl {
+    box-shadow: $box-shadow-xl !important;
+}
+
+.bg-primary-opacity {
+    background-color: rgba($primary, .75);
+}
+
+.first-upper {
+    &:first-letter {
+        @extend .text-uppercase;
+    }
+}
+
+// для картинок css
+
+%img-bg {
+    @extend .img-fluid;
+
+    @extend .overflow-hidden;
+    box-sizing: border-box;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.absolute {
+    @extend .position-absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.bg-absolute {
+    @extend .absolute;
+    @extend .w-100;
+    @extend .h-100;
+
+    &-before {
+        &::before {
+            content: "";
+            @extend .absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+// для выравнивания картинок cms joomla
+@each $pull,
+$mr,
+$ml in (none, auto, auto),
+(left, 3, 0),
+(right, 0, 3) {
+    .pull-#{$pull} {
+        @extend .d-block;
+        @extend .mr-#{$mr};
+        @extend .ml-#{$ml};
+        @extend .float-#{$pull};
+    }
+}
+
+.fa-phone {
+    @extend .fa-flip-horizontal;
+    @extend .far;
+}
+
+// заголовок
+.page {
+    &-header {
+        @extend .h1;
+        @extend .mb-4;
+    }
+
+    &-subheading {
+        @extend .h1;
+        @extend .mb-4;
+    }
+
+    &-title {
+        @extend .h2;
+        @extend .mb-4;
+    }
+
+    &-subtitle {
+        @extend .h3;
+        @extend .mb-4;
+    }
+
+    &-lead {
+        @extend .lead;
+    }
+}
+
+.card-image {
+    @extend .my-3;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.readmore {
+    .btn {
+        @extend .btn-outline-primary;
+    }
+}
+
+.link {
+    @extend .stretched-link;
+}
+
+.pdf {
+    &:before {
+        @extend .fal;
+        @extend .fa-file-pdf;
+        @extend .text-primary;
+        @extend .pr-3;
+    }
+}
+
+[class*="-ground-pane"] {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+}
+
+.totop {
+    @extend .position-fixed;
+    right: 1rem;
+    bottom: 1rem;
+    @extend .bg-primary;
+    @extend a;
+    cursor: pointer;
+    opacity: .8;
+    width: 3rem;
+    height: 3rem;
+    // @extend .bg-white;
+    // background-image: url('/images/totop.png');
+    @extend %img-bg;
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+
+    @include hover-focus-active {
+        opacity: 1;
+    }
+
+    .arrow {
+        @extend .text-white;
+        @extend .p-3;
+        @extend .d-flex;
+        @extend .justify-content-center;
+        @extend .align-items-center;
+    }
+}
+
+.close,
+.mfp-close {
+    font-size: $font-size-lg * 2;
+    @extend .position-absolute;
+    right: 0;
+    z-index: $zindex-popover;
+}
+
+.contacts {
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .justify-content-between;
+    @extend .h-100;
+    @extend .mb-0;
+}
+
+.youtube {
+    @extend .card;
+    @extend .text-danger;
+
+    a {
+        @extend .link;
+    }
+
+    i {
+        @extend .card-img-overlay;
+        @extend .d-flex;
+        @extend .justify-content-center;
+        @extend .align-items-center;
+        @extend .display-2;
+    }
+}
+
+// если включено показывание иконок 
+.icons {
+    ul {
+        @extend .text-center;
+    }
+
+    li {
+        a {
+            @extend .link;
+        }
+    }
+}
+
+// @include media-breakpoint-down(lg) {
+//     .slick-dots {
+//         li {
+//             width: $spacer * 3;
+//             height: $spacer * 3;
+//             margin: -$spacer * 3;
+
+//             button:before {
+//                 font-size: $spacer * 3;
+//             }
+//         }
+//     }
+// }

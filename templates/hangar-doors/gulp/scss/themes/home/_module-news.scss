@@ -1,0 +1,73 @@
+.mod-news {
+    @extend .mb-4;
+
+    .slick-track {
+        @extend .h-100;
+    }
+
+    .module {
+        &-news {
+            @extend .card-deck;
+        }
+
+        &_col {
+            @extend .d-flex;
+            // @extend .h-100;
+            // @extend .mx-auto;
+        }
+
+        &_card {
+            @include hover-focus-active {
+                @extend .shadow;
+                @include transition($transition-base);
+            }
+
+            &-link {
+                @extend .link;
+            }
+
+            @extend .card;
+
+            @extend .rounded-0;
+            overflow: hidden;
+
+            &-images {
+                @extend .position-relative;
+                @extend .card-img-top;
+                @extend .d-flex;
+                @extend .justify-content-center;
+                @extend .align-items-center;
+
+                .image {
+                    @extend .w-100;
+                    height: 12rem;
+                    overflow: hidden;
+                }
+
+                .info-published {
+                    padding-left: $card-spacer-x;
+                    @extend .absolute;
+                    bottom: -$spacer;
+                }
+            }
+
+            &-item {
+                @extend .card-body;
+                @extend .pt-5;
+                overflow: hidden;
+            }
+
+            &-footer {
+                @extend .card-footer;
+            }
+
+            &-title {
+                @extend .h5;
+                @extend .mb-0;
+                @extend .text-break;
+                overflow: hidden;
+            }
+        }
+
+    }
+}

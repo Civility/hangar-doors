@@ -1,0 +1,21 @@
+.article-solutions {
+    .gallery {
+        @extend .w-100;
+        @extend .card-deck;
+
+        &_col {
+            @extend .card;
+            // @extend .w-100;
+
+            .image {
+                @extend .w-100;
+                @extend .mb-0;
+            }
+        }
+
+        .slick-track {
+            // @extend .w-100;
+            // @extend .d-flex;
+        }
+    }
+}

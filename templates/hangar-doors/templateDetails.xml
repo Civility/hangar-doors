@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="template" client="site">
+	<name>Hangar-Doors</name>
+	<version>3.9</version>
+	<creationDate>01.08.2019</creationDate>
+	<author>Oleg Orlov</author>
+    <authorEmail>civilitys@gmail.com</authorEmail>
+    <copyright>© Oleg Orlov 2019, LLC. All rights reserved.</copyright>
+	<description>Hangar-Doors</description>
+	<files>
+		<folder>gulp</folder>
+		<folder>html</folder>
+		<folder>libs</folder>
+		<folder>language</folder>
+		<file>.gitignore</file>
+		<file>favicon.ico</file>
+		<file>gulpfile.js</file>
+		<file>index.php</file>
+		<file>error.php</file>
+		<file>offline.php</file>
+		<file>package.json</file>
+		<file>README.md</file>
+		<file>template_preview.png</file>
+		<file>template_thumbnail.png</file>
+		<file>templateDetails.xml</file>
+	</files>
+	<positions>
+		<position>menu</position>
+		<position>breadcrumb</position>
+		<position>events</position>
+		<position>main</position>
+		<position>aside</position>
+		<position>banner</position>
+		<position>debug</position>
+	</positions>
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_hangar-doors.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_hangar-doors.sys.ini</language>
+	</languages>
+</extension>

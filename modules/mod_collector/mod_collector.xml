@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.2" client="site" method="upgrade">
+	<name>MOD_COLLECTOR</name>
+	<creationDate>27.08.2019</creationDate>
+	<author>O.Orlov</author>
+	<authorEmail>netses@rmbler.ru</authorEmail>
+	<copyright>Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0.0</version>
+	<description>MOD_COLLECTOR_DESCRIPTION</description>
+	<customContent />
+	<files>
+		<!-- атрибут module - указывается, что файлы будут скопированы в папку с нашим модулем -->
+		<filename module="mod_collector">mod_collector.xml</filename>
+		<filename module="mod_collector">mod_collector.php</filename>
+		<filename module="mod_collector">helper.php</filename>
+		<filename module="mod_collector">index.html</filename>
+		<folder module="mod_collector">tmpl</folder>
+		<folder module="mod_collector">sub</folder>
+	</files>
+	<languages>
+		<language tag="ru-RU">language/ru-RU/ru-RU.mod_collector.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.mod_collector.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="REPEATCOLLECTOR">
+				<field name="collectors" type="subform" icon="list"
+					formsource="modules/mod_collector/sub/sub.xml"
+					layout="joomla.form.field.subform.repeatable"
+					multiple="true"
+					groupByFieldset="true"
+					buttons="add,remove,move"
+					label="MOD_COL_LABEL" 
+					description=""
+					max="18">
+				</field>	
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="source" type="text"
+					label="MOD_COL_LABEL_SOURCE"
+					description="MOD_COL_DESCRIPTION_SOURCE"
+					filter="integer" />
+				<field name="popup" type="radio"
+					label="MOD_COL_LABEL_POPUP"
+					description="MOD_COL_DESCRIPTION_POPUP"
+					default="1">
+				 	<option value="1">MOD_COL_OPTION_1</option>
+				 	<option value="2">MOD_COL_OPTION_2</option>
+				</field>
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="collector">
+        <field name="imgbig" type="media"
+            label="MOD_COL_LABEL_IMGBIG"
+            description="MOD_COL_DESCRIPTION_IMGBIG" />
+
+        <field name="imgmini" type="media"
+            label="MOD_COL_LABEL_IMGMINI"
+            description="MOD_COL_DESCRIPTION_IMGMINI" />
+
+        <field name="alt" type="text"
+            label="MOD_COL_LABEL_ALT"
+            description="MOD_COL_DESCRIPTION_ALT" />
+
+        <field name="title" type="text"
+            label="MOD_COL_LABEL_TITLE"
+            description="MOD_COL_DESCRIPTION_TITLE" />
+
+        <field name="header" type="textarea"
+            label="MOD_COL_LABEL_HEADER"
+            description="MOD_COL_DESCRIPTION_HEADER" 
+            filter="text" />
+
+        <field name="text" type="textarea"
+            label="MOD_COL_LABEL_TEXT"
+            description="MOD_COL_DESCRIPTION_TEXT" 
+            filter="text" />
+        <field name="url" type="url" 
+        default="" 
+        label="MOD_COL_LABEL_URL" 
+        description="MOD_COL_DESCRIPTION_URL" 
+        size="" />
+        <field name="texturl" type="text"
+            label="MOD_COL_LABEL_TEXTURL"
+            description="MOD_COL_DESCRIPTION_TEXTURL" 
+            filter="text" />
+    </fieldset>
+</form>

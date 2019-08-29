@@ -1,0 +1,50 @@
+.mod-menu {
+	@extend .container;
+	@extend .my-4;
+
+}
+
+.menu {
+	&-filter {
+
+		@extend .nav-pills;
+		@extend .nav-justified;
+		@extend .flex-column;
+		@extend .flex-sm-row;
+
+		.nav-item {
+			@extend .position-relative;
+
+			&:active {
+
+				.nav-link,
+				.active {
+					@extend .text-primary;
+					@extend .border-primary;
+				}
+			}
+
+		}
+
+		.nav-link {
+			@extend .link;
+			@extend .text-muted;
+			@extend .font-weight-bold;
+			@extend .border-top;
+			@extend .border-bottom;
+			@extend .text-truncate;
+
+			@include hover-focus-active {
+				@extend .text-primary;
+				@extend .border-primary;
+			}
+
+			&.active {
+				@extend .bg-transparent;
+				@extend .text-primary;
+				@extend .border-primary;
+			}
+		}
+
+	}
+}

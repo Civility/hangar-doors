@@ -1,0 +1,30 @@
+.page-category {
+	@import '../../content/category/blog';
+
+	&.category-project {
+		@import '../../content/category/block';
+
+		.item {
+			&-block {
+				// height: 250px;
+				// overflow: hidden;
+				@extend .justify-content-center;
+				@extend .align-items-center;
+
+
+				.image {
+					object-fit: cover;
+					height: 250px;
+				}
+			}
+
+			&-content {
+				overflow: hidden;
+				// text-overflow: ellipsis;
+				// hyphens: auto;
+				// word-wrap: normal;
+				@extend .text-break;
+			}
+		}
+	}
+}
